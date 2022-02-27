@@ -49,7 +49,7 @@ const App = () => {
               plaveholder="Enter name of Pokemon"
               value={pokemon}
               onChange={enterName}
-              className="text-capitalize col-2 py-1 my-3"
+              className="col-2 py-1 my-3"
             />
             <button
               className="btn-warning py-1 px-2 mx-2 text-white fw-bold fs-5"
