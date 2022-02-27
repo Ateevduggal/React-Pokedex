@@ -64,6 +64,7 @@ const App = () => {
           {loading ? (
             <div className="col-12 text-center fs-2 fw-bold p-5 mt-5">
               Enter the name of the pokemon in the input field
+              <br /> Use only lower case letters
             </div>
           ) : (
             <PokemonList
