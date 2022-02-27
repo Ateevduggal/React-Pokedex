@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Rock from "./Rock.jpg";
 const PokemonList = ({ singlePokemon, type, moves, img }) => {
   return (
