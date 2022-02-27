@@ -3,6 +3,7 @@ import PokemonList from "./PokemonList";
 import Pokemon from "./Pokemon.png";
 const App = () => {
   const [pokemon, setPokemon] = useState();
+  const [lower, setLower] = useState();
   const [singlePokemon, setSinglePokemon] = useState([]);
   const [type, setType] = useState();
   const [moves, setMoves] = useState();
@@ -10,7 +11,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchPokemonList = async () => {
-    const poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${lower}`);
     const pokeJ = await poke.json();
     console.log(pokeJ);
     setSinglePokemon(pokeJ);
@@ -31,6 +32,7 @@ const App = () => {
     if (pokemon === "") {
       alert("Give me a name to search");
     } else {
+      setLower(pokemon.toLowerCase());
       fetchPokemonList();
       setPokemon("");
     }
